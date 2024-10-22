@@ -1,0 +1,77 @@
+/* style.css */
+
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 15px 20px;
+    color: white;
+}
+
+.navbar__logo a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar__menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__menu li {
+    margin: 0 15px;
+}
+
+.navbar__menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar__menu a:hover {
+    color: #ffc107; /* 호버 색상 변경 */
+}
+
+/* 모바일 뷰를 위한 토글 버튼 */
+.navbar__toggleBtn {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 미디어 쿼리: 작은 화면에서 네비게이션 바 변경 */
+@media (max-width: 768px) {
+    .navbar__menu {
+        display: none; /* 기본적으로 숨김 */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* 네비게이션 바 아래 위치 */
+        left: 0;
+        background-color: #007bff;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .navbar__menu.show {
+        display: flex; /* 토글 버튼 클릭 시 보이도록 설정 */
+    }
+
+    .navbar__toggleBtn {
+        display: block; /* 작은 화면에서만 보이도록 설정 */
+    }
+}
