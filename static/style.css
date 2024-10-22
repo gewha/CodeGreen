@@ -29,7 +29,7 @@ header h1 {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 60px;
     align-items: center;
 }
 
@@ -41,17 +41,21 @@ nav ul li a {
 .user-info {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px;  
 }
 
-.seller-badge {
+.user-status {
     background-color: #3E6332;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
+    font-size: 14px;
+}
+.user-name{
+    font-size: 14px;
 }
 
-.profile-icon {
+.user-icon {
     width: 30px;
     height: 30px;
     background-color: #ccc;
